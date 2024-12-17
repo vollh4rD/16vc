@@ -12,16 +12,19 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <span class="logo-text">16VC</span>
-            </div>
+            <a href="/" class="logo-link">
+                <div class="logo">
+                    <span class="logo-text">16VC</span>
+                </div>
+            </a>
             <div class="nav-links">
-                <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Philosophy</a>
-                <a href="#" class="nav-link">Team</a>
-                <a href="#" class="nav-link">Portfolio</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#philosophy" class="nav-link">Philosophy</a>
+                <a href="#team" class="nav-link">Team</a>
+                
             </div>
-            <button class="contact-btn">Contact Us</button>
+            <button class="contact-btn">Pitch Us</button>
             <button class="mobile-menu-btn">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
@@ -31,18 +34,18 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
+                <div class="fade-in">
                     <h1>Empowering Innovators in<br>AI & Tech</h1>
                     <p>We're a venture firm passionate about the transformative power of technology and innovation. We invest early in ambitious founders building AI and Tech companies that can change the future.</p>
                     <div class="button-group">
                         <button class="secondary-btn">Join our Community</button>
-                        <button class="primary-btn">Want to Pitch?</button>
+                        <button class="primary-btn">Pitch Us Today!</button>
                     </div>
                 </div>
-                <div class="hero-image">
+                <div class="hero-image fade-in">
                     <img src="/assets/saturn.png" alt="Hero illustration">
                 </div>
             </div>
@@ -50,24 +53,24 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features bg-[#F3F3F3] py-20">
+    <section class="features" id="about">
         <div class="container-wrapper max-w-6xl mx-auto px-4">
             <div class="bg-white rounded-3xl p-12">
-                <h2 class="text-4xl font-bold mb-4">About Us</h2>
-                <p class="text-gray-600 mb-12">Founded and led by an experienced entrepreneur and investor, 16VC is a venture firm with $20M in Assets Under Management (AUM). We specialize in early-stage investments, focusing on AI, technology, HealthTech, SaaS, FinTech, and FemTech. Our goal is to empower visionary founders by providing</p>
+                <h2>About Us</h2>
+                <p>Founded and led by an experienced entrepreneur and investor, 16VC is a venture firm with $20M in Assets Under Management (AUM). We specialize in early-stage investments, focusing on AI, technology, HealthTech, SaaS, FinTech, and FemTech.</p>
                 
                 <div class="features-grid">
-                    <div class="feature-card bg-[#F3F3F3]">
-                        <div class="text-2xl font-bold mb-6 text-black">01</div>
+                    <div class="feature-card">
+                        <div class="text-2xl font-bold mb-6">01</div>
                         <img src="/assets/about1.svg" alt="Investment icon" class="mb-6 w-12 h-12" />
-                        <p class="text-black">Up to $250,000 in investments to drive growth and innovation.</p>
+                        <p>Up to $250,000 in investments to drive growth and innovation.</p>
                     </div>
-                    <div class="feature-card bg-[#F3F3F3]">
+                    <div class="feature-card">
                         <div class="text-2xl font-bold mb-6">02</div>
                         <img src="/assets/about2.svg" alt="Funding icon" class="mb-6 w-12 h-12" />
                         <p>Flexible funding options via MFN SAFEs or round participation.</p>
                     </div>
-                    <div class="feature-card bg-[#F3F3F3]">
+                    <div class="feature-card">
                         <div class="text-2xl font-bold mb-6">03</div>
                         <img src="/assets/about3.svg" alt="Support icon" class="mb-6 w-12 h-12" />
                         <p>Hands-on support from a vast network of experts, mentors, and peers.</p>
@@ -82,41 +85,56 @@
         <div class="portfolio-container">
             <div class="portfolio-inner">
                 <h2>Our Portfolio Companies</h2>
-                
                 <div class="portfolio-scroll">
                     <div class="portfolio-track">
-                        <!-- First set of items -->
-                        <div class="portfolio-item">
-                            <img src="assets/company1.png" alt="Company 1">
+                        <div class="portfolio-item"><img src="assets/company1.png" alt="Company 1"></div>
+                        <div class="portfolio-item"><img src="assets/company2.png" alt="Company 2"></div>
+                        <div class="portfolio-item"><img src="assets/company3.png" alt="Company 3"></div>
+                        <div class="portfolio-item"><img src="assets/company4.png" alt="Company 4"></div>
+                        <div class="portfolio-item"><img src="assets/company5.png" alt="Company 5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Philosophy Section -->
+
+    <section class="philosophy-section" id="philosophy">
+        <div class="container-wrapper max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl p-12">
+                <h2 class="text-4xl font-bold mb-8">Our Philosophy</h2>
+                <p class="mb-8">We believe great investments are built on trust, foresight, and partnership. These core philosophies guide how we engage with founders and fuel their journey to success.</p>
+    
+                <div class="accordion">
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <h3>Long-Term Value Over Short-Term Wins</h3>
+                            <span class="icon">-</span>
                         </div>
-                        <div class="portfolio-item">
-                            <img src="assets/company5.png" alt="Company 2">
+                        <div class="accordion-content show">
+                            <p>We believe great investments are built on trust, foresight, and partnership. These core philosophies guide how we engage with founders and fuel their journey to success.</p>
                         </div>
-                        <div class="portfolio-item">
-                            <img src="assets/company2.png" alt="Company 3">
+                    </div>
+    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Independent Conviction, Collaborative Execution</h3>
+                            <span class="icon">+</span>
                         </div>
-                        <div class="portfolio-item">
-                            <img src="assets/company3.png" alt="Company 4">
+                        <div class="accordion-content">
+                            <p>We rely on independent conviction when making investment decisions, free from the need for internal consensus or external validation. However, once we invest, we collaborate closely with founders, providing strategic support, operational advice, and access to our global network to drive sustainable growth.                            </p>
                         </div>
-                        <div class="portfolio-item">
-                            <img src="assets/company4.png" alt="Company 5">
+                    </div>
+    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Efficient, Founder-Focused Investing</h3>
+                            <span class="icon">+</span>
                         </div>
-                        
-                        <!-- Duplicate set for seamless loop -->
-                        <div class="portfolio-item">
-                            <img src="assets/company1.png" alt="Company 1">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="assets/company5.png" alt="Company 2">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="assets/company2.png" alt="Company 3">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="assets/company3.png" alt="Company 4">
-                        </div>
-                        <div class="portfolio-item">
-                            <img src="assets/company4.png" alt="Company 5">
+                        <div class="accordion-content">
+                            <p>We respect the fast-paced nature of early-stage startups. Our streamlined diligence process ensures timely decisions, typically within two weeks. We offer flexible investment terms tailored to each company's unique needs, ensuring founders receive the right support at the right time.</p>
                         </div>
                     </div>
                 </div>
@@ -125,59 +143,38 @@
     </section>
 
     <!-- Team Section -->
-    <section class="team-section">
+    <section class="team-section" id="team">
         <div class="team-container">
             <div class="team-inner">
                 <h2>Meet the Team</h2>
-                
                 <div class="team-grid">
                     <div class="team-member">
                         <div class="image-wrapper">
                             <img src="/assets/team1.jpg" alt="Sridhar A">
                         </div>
                         <h3>Sridhar A</h3>
-                        <p>Managing Partner</p>
+                        <p>General Partner and Founder</p>
                     </div>
-                    
                     <div class="team-member">
                         <div class="image-wrapper">
-                            <img src="/assets/team2.jpg" alt="George Parfenyuk">
+                            <img src="/assets/team2.jpg" alt="George P">
                         </div>
-                        <h3>George Parfenyuk</h3>
+                        <h3>George P</h3>
                         <p>Venture Partner</p>
                     </div>
-                    
                     <div class="team-member">
                         <div class="image-wrapper">
-                            <img src="/assets/team3.jpg" alt="Balaji Vasudevan">
+                            <img src="/assets/team3.jpg" alt="Balaji V">
                         </div>
-                        <h3>Balaji Vasudevan</h3>
+                        <h3>Balaji V</h3>
                         <p>Venture Partner</p>
                     </div>
-                    
                     <div class="team-member">
                         <div class="image-wrapper">
-                            <img src="/assets/team4.jpg" alt="Jeremy Kennelly">
+                            <img src="/assets/team4.jpg" alt="Jeremy K">
                         </div>
-                        <h3>Jeremy Kennelly</h3>
+                        <h3>Jeremy K</h3>
                         <p>Legal Counsel</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-container">
-            <div class="cta-inner">
-                <div class="cta-content">
-                    <div class="content-left">
-                        <h2>Have a startup idea or seeking funding?</h2>
-                        <p>We'd love to hear from you! Whether you're a founder with a bold vision, an investor looking to collaborate, or just someone interested in the future of AI and tech.</p>
-                        <button class="cta-btn">Let's Connect</button>
-                    </div>
-                    <div class="content-right">
-                        <img src="/assets/circuit-board.png" alt="CTA illustration" class="cta-image">
                     </div>
                 </div>
             </div>
@@ -190,27 +187,25 @@
             <div class="footer-inner">
                 <div class="footer-grid">
                     <div class="footer-brand">
-                        <div class="logo">
-                            <span class="logo-text">16VC</span>
-                        </div>
+                        <a href="/" class="logo-link">
+                            <div class="logo">
+                                <span class="logo-text">16VC</span>
+                            </div>
+                        </a>
                         <p>Startup? Get in touch here<br>info@16vc.co</p>
                     </div>
-                    
                     <div class="footer-content">
                         <h3>Company</h3>
                         <ul>
-                            <li>About</li>
-                            <li>Philosophy</li>
-                            <li>Team</li>
-                            <li>Initiatives</li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#philosophy">Philosophy</a></li>
+                            <li><a href="#team">Team</a></li>
                         </ul>
                     </div>
-                    
                     <div class="footer-content">
                         <h3>Media</h3>
                         <p>Check out our latest news</p>
                     </div>
-                    
                     <div class="footer-content">
                         <h3>FAQ</h3>
                         <ul>
@@ -220,7 +215,6 @@
                         </ul>
                     </div>
                 </div>
-                
                 <div class="footer-bottom">
                     <div>Terms of Use・Privacy Policy・Sitemap</div>
                     <div>© 2024. All rights reserved</div>
