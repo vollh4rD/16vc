@@ -231,3 +231,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Initialize FAQ accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const header = item.querySelector('.faq-header');
+        
+        header.addEventListener('click', () => {
+            const currentlyActive = document.querySelector('.faq-item.active');
+            
+            if (currentlyActive && currentlyActive !== item) {
+                currentlyActive.classList.remove('active');
+            }
+            
+            item.classList.toggle('active');
+        });
+    });
+});
