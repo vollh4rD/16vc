@@ -705,3 +705,48 @@ h2 {
     }
 }
 
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.footer-brand p, .footer-brand a {
+    color: #666666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.footer-brand a:hover {
+    color: var(--primary);
+}
+
+
+.linkedin-link {
+    display: inline-flex;
+    margin-top: 0.5rem;
+    color: #94A3B8;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+.team-member {
+    text-align: left;
+}
