@@ -210,47 +210,79 @@ document.addEventListener('DOMContentLoaded', function() {
     
     accordionItems.forEach(item => {
         const header = item.querySelector('.accordion-header');
+        const content = item.querySelector('.accordion-content');
+        const icon = item.querySelector('.icon');
+        
+        // Initially close all content except the first item
+        if (!item.classList.contains('active')) {
+            content.style.maxHeight = '0';
+            content.style.opacity = '0';
+        } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.opacity = '1';
+        }
         
         header.addEventListener('click', () => {
-            const currentlyActive = document.querySelector('.accordion-item.active');
+            const isActive = item.classList.contains('active');
             
-            if (currentlyActive && currentlyActive !== item) {
-                // Close currently active item
-                currentlyActive.classList.remove('active');
-                currentlyActive.querySelector('.accordion-content').classList.remove('show');
-                currentlyActive.querySelector('.icon').textContent = '+';
+            // Close all items first
+            accordionItems.forEach(otherItem => {
+                const otherContent = otherItem.querySelector('.accordion-content');
+                otherItem.classList.remove('active');
+                otherContent.style.maxHeight = '0';
+                otherContent.style.opacity = '0';
+                otherItem.querySelector('.icon').textContent = '+';
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.opacity = '1';
+                icon.textContent = '-';
             }
-            
-            // Toggle clicked item
-            const content = item.querySelector('.accordion-content');
-            const icon = item.querySelector('.icon');
-            
-            item.classList.toggle('active');
-            content.classList.toggle('show');
-            icon.textContent = item.classList.contains('active') ? '-' : '+';
         });
     });
-});
 
-// Initialize FAQ accordion functionality
-document.addEventListener('DOMContentLoaded', function() {
+    // FAQ accordion
     const faqItems = document.querySelectorAll('.faq-item');
     
     faqItems.forEach(item => {
         const header = item.querySelector('.faq-header');
+        const content = item.querySelector('.faq-content');
+        const plus = item.querySelector('.plus');
+        
+        // Initially close all content except the first item
+        if (!item.classList.contains('active')) {
+            content.style.maxHeight = '0';
+            content.style.opacity = '0';
+        } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.opacity = '1';
+        }
         
         header.addEventListener('click', () => {
-            const currentlyActive = document.querySelector('.faq-item.active');
+            const isActive = item.classList.contains('active');
             
-            if (currentlyActive && currentlyActive !== item) {
-                currentlyActive.classList.remove('active');
+            // Close all items first
+            faqItems.forEach(otherItem => {
+                const otherContent = otherItem.querySelector('.faq-content');
+                otherItem.classList.remove('active');
+                otherContent.style.maxHeight = '0';
+                otherContent.style.opacity = '0';
+                otherItem.querySelector('.plus').textContent = '+';
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.opacity = '1';
+                plus.textContent = '-';
             }
-            
-            item.classList.toggle('active');
         });
     });
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('img').forEach(img => {
         img.onerror = function() {
