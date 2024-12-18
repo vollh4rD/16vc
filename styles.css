@@ -386,12 +386,20 @@ h2 {
     padding: 0 24px;
 }
 
-.accordion-content p {
-    padding-bottom: 24px;
-    color: #666;
-    line-height: 1.6;
+.accordion-content {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+    max-height: 0;
+}
+.accordion-item.active .accordion-content {
+    opacity: 1;
 }
 
+.accordion-content.show,
+.faq-content.show {
+    max-height: none;
+}
 .accordion-content.show {
     max-height: 200px; /* Adjust based on content */
 }
@@ -573,12 +581,11 @@ h2 {
 }
 
 .faq-content {
-    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    padding: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+    max-height: 0;
 }
-
 .faq-content p {
     padding: 0 0 24px 0;
     color: #4B5563;
@@ -587,6 +594,7 @@ h2 {
 
 .faq-item.active .faq-content {
     max-height: 200px;
+    opacity: 1;
 }
 
 .faq-item.active .plus {
