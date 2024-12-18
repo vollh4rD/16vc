@@ -250,3 +250,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('img').forEach(img => {
+        img.onerror = function() {
+            console.error(`Failed to load image: ${img.src}`);
+            // Optionally set a fallback image
+            // this.src = 'fallback-image.png';
+        };
+    });
+});
